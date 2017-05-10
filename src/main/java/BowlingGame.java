@@ -1,8 +1,8 @@
-import org.junit.Test;
+//import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.assertEquals;
+//import static org.junit.Assert.assertEquals;
 
 /*
 结对编程，保龄球。
@@ -173,69 +173,69 @@ public class BowlingGame {
     }
 
 
-    @Test  // 用于测试字符串是否合法
-    public void is_legal() {
-        // Given
-        String str_1 = "X|7/|9-|X|-8|8/|-6|X|X|X||81";   // 正确
-        String str_2 = "X1|7/|9-|X|-8|8/|-6|X|X|X||81";  // X 后面多1个数
-        String str_3 = "X|/1|9-|X|-8|8/|-6|X|X|X||81";  // / 后面多一个数
-        String str_4 = "M|7/|X/|X|-8|8/|-6|X|X|X||81";  // M 非法。
-        String str_5 = "X/|7/|9-|X|89|8/|-6|X|X|X||81";  // X/ 非法.
-        String str_6 = "222|7/|9-|X|-8|8/|-6|X|X|X||81";  // 3位数
-        String str_7 = "22|7/|9-|X|-8|8/|-6|X|X|X|81";  // 不是11个|
-        String str_8 = "22|7/|9-|X|-8|8/||-6|X|X|X|81";  // 中间出现两个||，未检测。
-        String str_9 = "22|7/|9-|X|-8|8/|-6|X|X|X|8|1";  // 无连续两个||
-        // Then
-        System.out.println("1" + IsLegal(str_1));
-        System.out.println("2" + IsLegal(str_2));
-        System.out.println("3" + IsLegal(str_3));
-        System.out.println("4" + IsLegal(str_4));
-        System.out.println("5" + IsLegal(str_5));
-        System.out.println("6" + IsLegal(str_6));
-        System.out.println("7" + IsLegal(str_7));
-        System.out.println("8" + IsLegal(str_8));
-        System.out.println("9" + IsLegal(str_9));
-    }
-
-    @Test //用于测试字符串是否转换为合法的ArrayList。
-    public void is_right_ArrayList() {  // 10+10+10=30
-        //Given
-        String str = "5/|5/|5/|5/|5/|5/|5/|5/|5/|5/||5";
-        ArrayList arrayList = toArrayList(str);  // 拿到str的ArrayList数组。
-        //Then
-        System.out.println(arrayList);
-    }
-
-    @Test
-    public void is_right_getSingleCharScore() {
-        char c_1 = 'X';
-        char c_2 = '2';
-        char c_3 = '9';
-        System.out.println(getSingleCharScore(c_1));
-        System.out.println(getSingleCharScore(c_2));
-        System.out.println(getSingleCharScore(c_3));
-    }
-
-
-    @Test
-    public void is_right_getBowlingScore() {
-        //Given
-        String str_1 = "X|X|X|X|X|X|X|X|X|X||XX";
-        String str_2 = "9-|9-|9-|9-|9-|9-|9-|9-|9-|9-||";
-        String str_3 = "5/|5/|5/|5/|5/|5/|5/|5/|5/|5/||5";
-        String str_4 = "X|7/|9-|X|-8|8/|-6|X|X|X||81";
-        String str_5 = "X/|7/|9-|X|89|8/|-6|X|X|X||81";  // X/ 非法.
-        //When
-        int score_1 = getBowlingScore(str_1);
-        int score_2 = getBowlingScore(str_2);
-        int score_3 = getBowlingScore(str_3);
-        int score_4 = getBowlingScore(str_4);
-        int score_5 = getBowlingScore(str_5);
-        //Then
-        assertEquals(300, score_1);
-        assertEquals(90, score_2);
-        assertEquals(150, score_3);
-        assertEquals(167, score_4);
-        assertEquals(0, score_5);
-    }
+//    @Test  // 用于测试字符串是否合法
+//    public void is_legal() {
+//        // Given
+//        String str_1 = "X|7/|9-|X|-8|8/|-6|X|X|X||81";   // 正确
+//        String str_2 = "X1|7/|9-|X|-8|8/|-6|X|X|X||81";  // X 后面多1个数
+//        String str_3 = "X|/1|9-|X|-8|8/|-6|X|X|X||81";  // / 后面多一个数
+//        String str_4 = "M|7/|X/|X|-8|8/|-6|X|X|X||81";  // M 非法。
+//        String str_5 = "X/|7/|9-|X|89|8/|-6|X|X|X||81";  // X/ 非法.
+//        String str_6 = "222|7/|9-|X|-8|8/|-6|X|X|X||81";  // 3位数
+//        String str_7 = "22|7/|9-|X|-8|8/|-6|X|X|X|81";  // 不是11个|
+//        String str_8 = "22|7/|9-|X|-8|8/||-6|X|X|X|81";  // 中间出现两个||，未检测。
+//        String str_9 = "22|7/|9-|X|-8|8/|-6|X|X|X|8|1";  // 无连续两个||
+//        // Then
+//        System.out.println("1" + IsLegal(str_1));
+//        System.out.println("2" + IsLegal(str_2));
+//        System.out.println("3" + IsLegal(str_3));
+//        System.out.println("4" + IsLegal(str_4));
+//        System.out.println("5" + IsLegal(str_5));
+//        System.out.println("6" + IsLegal(str_6));
+//        System.out.println("7" + IsLegal(str_7));
+//        System.out.println("8" + IsLegal(str_8));
+//        System.out.println("9" + IsLegal(str_9));
+//    }
+//
+//    @Test //用于测试字符串是否转换为合法的ArrayList。
+//    public void is_right_ArrayList() {  // 10+10+10=30
+//        //Given
+//        String str = "5/|5/|5/|5/|5/|5/|5/|5/|5/|5/||5";
+//        ArrayList arrayList = toArrayList(str);  // 拿到str的ArrayList数组。
+//        //Then
+//        System.out.println(arrayList);
+//    }
+//
+//    @Test
+//    public void is_right_getSingleCharScore() {
+//        char c_1 = 'X';
+//        char c_2 = '2';
+//        char c_3 = '9';
+//        System.out.println(getSingleCharScore(c_1));
+//        System.out.println(getSingleCharScore(c_2));
+//        System.out.println(getSingleCharScore(c_3));
+//    }
+//
+//
+//    @Test
+//    public void is_right_getBowlingScore() {
+//        //Given
+//        String str_1 = "X|X|X|X|X|X|X|X|X|X||XX";
+//        String str_2 = "9-|9-|9-|9-|9-|9-|9-|9-|9-|9-||";
+//        String str_3 = "5/|5/|5/|5/|5/|5/|5/|5/|5/|5/||5";
+//        String str_4 = "X|7/|9-|X|-8|8/|-6|X|X|X||81";
+//        String str_5 = "X/|7/|9-|X|89|8/|-6|X|X|X||81";  // X/ 非法.
+//        //When
+//        int score_1 = getBowlingScore(str_1);
+//        int score_2 = getBowlingScore(str_2);
+//        int score_3 = getBowlingScore(str_3);
+//        int score_4 = getBowlingScore(str_4);
+//        int score_5 = getBowlingScore(str_5);
+//        //Then
+//        assertEquals(300, score_1);
+//        assertEquals(90, score_2);
+//        assertEquals(150, score_3);
+//        assertEquals(167, score_4);
+//        assertEquals(0, score_5);
+//    }
 }

@@ -1,0 +1,16 @@
+import org.junit.Test;
+
+public class BowLingGame {
+    public void getBowlingScore(String s) {
+        return s;
+    }
+
+    @Test
+    public void print_string() {
+        //Given
+        String string = "X|X|X|X|X|X|X|X|X|X||XX";
+        //When
+        //Then
+        assertEquals("X|X|X|X|X|X|X|X|X|X||XX", getBowlingScore(string));
+    }
+}

@@ -102,7 +102,7 @@ public class BowlingGame {
             }
         }
         for (i = i + 1; i < chrCharArray.length; i++) {
-            //记录最后两个额外得分情况
+            //记录最后两个额外得分情况。
             arrayList.add(chrCharArray[i] + "");
         }
         if (arrayList.size() == 10) {
@@ -116,7 +116,7 @@ public class BowlingGame {
     }
 
     /*
-    简单判断此函数用于判断字符串输入是否合法。
+    此函数用于判断字符串输入是否合法。
     */
     private boolean IsLegal(String s) {
         // 每一格最多只能击球2次。
@@ -197,7 +197,7 @@ public class BowlingGame {
         System.out.println("9" + IsLegal(str_9));
     }
 
-    @Test //用于测试字符串是否转换为合法的ArrayList。
+    @Test  // 用于测试字符串是否转换为合法的ArrayList。
     public void is_right_ArrayList() {  // 10+10+10=30
         //Given
         String str = "5/|5/|5/|5/|5/|5/|5/|5/|5/|5/||5";
@@ -206,7 +206,7 @@ public class BowlingGame {
         System.out.println(arrayList);
     }
 
-    @Test
+    @Test  // 检测单个字符是否能转化为对应分数
     public void is_right_getSingleCharScore() {
         char c_1 = 'X';
         char c_2 = '2';
@@ -217,7 +217,7 @@ public class BowlingGame {
     }
 
 
-    @Test
+    @Test  // 最终测试
     public void is_right_getBowlingScore() {
         //Given
         String str_1 = "X|X|X|X|X|X|X|X|X|X||XX";
